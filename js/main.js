@@ -26,7 +26,7 @@
 			scrollInertia:1000, /*scrolling inertia: integer (milliseconds)*/
 			scrollEasing:"easeOutCirc", /*scrolling easing: string*/
 			mouseWheel:20, /*mousewheel support and velocity: boolean, "auto", integer*/
-			mouseWheelPixels: 350,
+			mouseWheelPixels: 250,
 			autoDraggerLength:true, /*auto-adjust scrollbar dragger length: boolean*/
 			theme: "dark",
 			scrollButtons:{ /*scroll buttons*/
@@ -288,7 +288,32 @@ $(function(){
 				fitToView   : false,
 				autoSize    : false,
 				closeClick  : false
-			});		
+			});
+
+ 			// Ajax
+ 			$('.ajax').fancybox({
+ 				type        : 'ajax',
+ 				openEffect  : 'fade',
+ 				closeEffect	: 'fade',
+ 				nextEffect  : 'fade',
+ 				prevEffect  : 'fade',
+ 				helpers     : {
+ 					title   : {
+ 						type : 'inside'
+ 					},
+ 					buttons  : {},
+ 					media    : {},
+ 					overlay : { locked : false }
+ 				},
+ 				 width       : '100%',
+				// height      : '70%',
+				maxWidth    : 800,
+				// maxHeight   : 600,
+				fitToView   : true,
+				autoSize    : true,
+				closeClick  : false
+			});	
+
 })(jQuery);
 /* end Fancy Box */
 
@@ -401,6 +426,73 @@ $(function(){
 		    var pattern = new RegExp(/^(("[\w-+\s]+")|([\w-+]+(?:\.[\w-+]+)*)|("[\w-+\s]+")([\w-+]+(?:\.[\w-+]+)*))(@((?:[\w-+]+\.)*\w[\w-+]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][\d]\.|1[\d]{2}\.|[\d]{1,2}\.))((25[0-5]|2[0-4][\d]|1[\d]{2}|[\d]{1,2})\.){2}(25[0-5]|2[0-4][\d]|1[\d]{2}|[\d]{1,2})\]?$)/i);
 		    return pattern.test(email);
 		};
+
+})(jQuery);
+
+/* ---------------------------------------------------------------------- */
+/*	MOBILE SLIDE DOWN & WINDOW Resize detection
+/* ---------------------------------------------------------------------- */
+(function($){
+
+	var isSmallScreen;
+	var navContainer = $(".nav-container");
+
+	var waitForFinalEvent = (function () {			
+		var timers = {};			
+
+		/** Check Window Resize event **/
+		checkWindowSize();
+
+		return function (callback, ms, uniqueId) {
+		if (!uniqueId) {
+		  uniqueId = "Don't call this twice without a uniqueId";
+		}
+		if (timers[uniqueId]) {
+		  clearTimeout (timers[uniqueId]);
+		}
+		timers[uniqueId] = setTimeout(callback, ms);
+		};
+	})();
+
+	$(window).resize(function () {
+	    waitForFinalEvent(function(){
+			checkWindowSize();     
+	    }, 500, "resize-id-1");
+	});		
+
+
+	/** Hide and Show Mobile Menu on click **/
+	$('#menu .menu-select').click(function(event){
+	    event.preventDefault();
+		if(navContainer.is(":visible")) {
+	      navContainer.slideUp("slow");
+	    } else {
+	      navContainer.slideDown("slow");
+	    }
+	});
+
+	$('nav li a').click(function(){
+		if (navContainer.is(":visible") && isSmallScreen) {
+		      navContainer.slideUp("slow");
+		}
+	});					
+
+
+	/* FUNCTIONS */
+	function checkWindowSize() {
+
+		if($(window).width() < 768) {
+			isSmallScreen = true;
+			if(navContainer.is(":visible")) {
+					navContainer.slideUp("slow");
+			}			
+		} else {
+			isSmallScreen = false; 
+			if(navContainer.is(":hidden")) {
+					navContainer.slideDown("fast");
+			}	    	
+		}
+	}
 
 })(jQuery);
 

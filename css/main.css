@@ -184,20 +184,26 @@ header {
             border-bottom-style: solid;
             border-bottom-width: 4px;
             border-bottom-color: transparent;
+
+            -webkit-transition: all 0.8s;
+            -moz-transition: all 0.8s;
+            -ms-transition: all 0.8s;
+            -o-transition: all 0.8s;
+            transition: all 0.8s;
         }
-        .nav-container a.selected,.nav-container a.selected:focus {
+        .nav-container a.selected,.nav-container a:focus,.nav-container a:hover {
             border-bottom-color: #00aeef;
             color: #00aeef;
             outline: none;
         }
-        .nav-container a:focus {
+       /* .nav-container a:focus {
             border-bottom-color: #4a4a4a;
             color: #00aeef;
-        }
-        .nav-container a:hover {
+        }*/
+       /* .nav-container a:hover {
             border-bottom-color: #c1c1c1;
             color: #00aeef;
-        }
+        }*/
 
 
 /* ==========================================================================
@@ -609,7 +615,7 @@ header {
     Services styles
     ========================================================================== */
     
-    .services i {font-size:60px; color: #909090; display:block; line-height: 60px;}
+    .services i {font-size:60px; color: #00aeef; display:block; line-height: 60px;}
 
     /* ==========================================================================
     Portfolio styles
@@ -670,9 +676,9 @@ header {
         float: left;
         cursor: pointer;
         z-index: 3;
-        background: #fff;
+        background: #eee;
         width: 222px;
-        height: 240px;
+        height: 210px; /*height: 240px;*/
         margin:0 7px 14px;
         -webkit-box-shadow: 0 0 2px #ccc;
         -moz-box-shadow: 0 0 2px #ccc;
@@ -774,22 +780,13 @@ header {
     #portfolio-items.four-columns .item {
 
         width: 222px;
-        height: 240px;
+        height: 210px;
     }
     #portfolio-items.four-columns .thumb-image {
         width: 220px;
-        height: 180px; 
+        height: 150px; 
     }
 
-    /* three columns style */
-    #portfolio-items.three-columns .item {
-
-    }
-
-    /* two columns style */
-    #portfolio-items.two-columns .item {
-
-    }
 
     /* ==========================================================================
     Our Team styles
@@ -1021,7 +1018,7 @@ footer .nav-container a:hover {
 
 .mCSB_container{
     width:auto;
-    margin-right:20px;
+    margin-right:17px;
     overflow:hidden;
 }
 .mCSB_container.mCS_no_scrollbar{
@@ -1618,6 +1615,23 @@ html[xmlns] .slides {display: block;}
  .left { text-align: left; }
  .right { text-align: right; }
 
+ .alignleft {
+    float:left;
+    margin-right:20px;
+    margin-bottom:10px;
+ }
+
+ .alignright {  
+    float:right;
+    margin-left:20px;
+    margin-bottom:10px;  
+ }
+
+ .aligncenter {
+    display:block;
+    margin:0 auto 10px;
+ }
+
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
@@ -1706,7 +1720,7 @@ html[xmlns] .slides {display: block;}
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
     .nav-container li a {
-    padding: 0 8px;
+    padding: 0 7px;
     font-size: 0.9em;
     }
 
@@ -1719,6 +1733,7 @@ html[xmlns] .slides {display: block;}
         padding: 4px 0 0;
         line-height: 0;
     }
+        #main-container {top:51px;}
 
         .menu-select {
             background: url(../img/mobile-menu-bg.png) no-repeat right 0;

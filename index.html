@@ -61,16 +61,19 @@
                     <nav id="menu">
                                 <h2 class="hidden">Navigation</h2>
                                 <a class="menu-select" href="#"><img src="img/empty.gif" alt="Menu Select" /></a>
+
                                 <div class="nav-container">
-                                    <ul>                         
-                                      <li><a href="#home">Home</a></li>
-                                      <li><a href="#about">About</a></li>                                     
-                                      <li><a href="#services">Services</a></li>                           
-                                      <li><a href="#portfolio">Portfolio</a></li>
-                                      <li><a href="#our-team">Our Team</a></li>
-                                       <li><a href="#features">Features</a></li>
-                                      <li><a href="#contact">Contact</a></li>
-                                    </ul>
+                                    <div class="columns small-12">
+                                        <ul>                         
+                                          <li><a href="#home">Home</a></li>
+                                          <li><a href="#about">About</a></li>
+                                          <li><a href="#our-team">Our Team</a></li>                                      
+                                          <li><a href="#services">Services</a></li>                          
+                                          <li><a href="#portfolio">Portfolio</a></li>
+                                          <li><a href="#features">Features</a></li>
+                                          <li><a href="#contact">Contact</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                     </nav> <!-- END #menu -->
 
@@ -143,6 +146,73 @@
             </div> <!-- END .row -->
         </article> <!-- END #about -->
 
+
+        <article id="our-team" class="odd content">
+            <div class="row">
+                <div class="large-12 columns">
+
+
+                    <h2 class="header-title">Our Team <span class="tagline">We are a group of awesome individuals!</span></h2>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ab, cumque at nesciunt aliquid fugit quo eveniet nulla assumenda sed dolorum iusto sequi consequuntur! Repudiandae, quos, nisi, error vitae pariatur quo assumenda ipsa tempore dolore temas sed.</p>              
+
+                    <div class="row">
+                        <div class="team-member large-4 columns center">
+                            <div class="portrait">
+                                <a class="ajax" href="/team/john.html">
+                                    <em class="p-overlay"></em>
+                                    <img src="img/john-doe.jpg" alt="John Doe" />
+                                </a>
+                                <ul id="team-social">
+                                    <li><a class="team-s fb" href="#"><img src="img/empty.gif" alt="Facebook" /></a></li>   
+                                    <li><a class="team-s tt" href="#"><img src="img/empty.gif" alt="Twitter" /></a></li>    
+                                    <li><a class="team-s gp" href="#"><img src="img/empty.gif" alt="Google Plus" /></a></li>    
+                                </ul>
+                            </div>
+                                <h4 class="name">John Doe <span class="position">Designer</span></h4>
+                                
+                        </div> <!--END of Team Member Box--> 
+
+                        <div class="team-member large-4 columns center">
+                            <div class="portrait">
+                                <a class="ajax" href="/team/jane.html">
+                                    <em class="p-overlay"></em>
+                                    <img src="img/jane-doe.jpg" alt="Jane Doe" />
+                                </a>
+                                <ul id="team-social">
+                                    <li><a class="team-s fb" href="#"><img src="img/empty.gif" alt="Facebook" /></a></li>   
+                                    <li><a class="team-s tt" href="#"><img src="img/empty.gif" alt="Twitter" /></a></li>    
+                                    <li><a class="team-s gp" href="#"><img src="img/empty.gif" alt="Google Plus" /></a></li>    
+                                </ul>                               
+                            </div>
+                                <h4 class="name">Jane Doe <span class="position">Founder</span></h4>
+                                    
+                        </div> <!--END of Team Member Box--> 
+
+                        <div class="team-member large-4 columns center">
+                            <div class="portrait">
+                                <a class="ajax" href="/team/jason.html">   
+                                    <em class="p-overlay"></em>
+                                    <img src="img/jason-doe.jpg" alt="Jason Doe" />
+                                </a>
+                                <ul id="team-social">
+                                    <li><a class="team-s fb" href="#"><img src="img/empty.gif" alt="Facebook" /></a></li>   
+                                    <li><a class="team-s tt" href="#"><img src="img/empty.gif" alt="Twitter" /></a></li>    
+                                    <li><a class="team-s gp" href="#"><img src="img/empty.gif" alt="Google Plus" /></a></li>    
+                                </ul>                               
+                            </div>
+
+                                <h4 class="name">Jason Doe <span class="position">Designer</span></h4>
+                                    
+                        </div> <!--END of Team Member Box--> 
+                    </div><!-- END .row -->
+
+                </div> <!-- END .large-12 .columns -->
+            </div> <!-- END .row -->
+        </article> <!-- END #our-team -->
+
+
+
         <article id="services" class="odd content services">
             <div class="row">
                 <div class="large-12 columns">
@@ -203,122 +273,122 @@
                         <ul>
                             <li><a data-categories="*">All</a></li>
                             <li><a data-categories="animation">Animation</a></li>
-                            <li><a data-categories="design">Design</a></li>
-                            <li><a data-categories="illustration">Illustration</a></li>
+                            <li><a data-categories="design">Design</a></li>                            
                             <li><a data-categories="photography">Photography</a></li>
+                            <li><a data-categories="illustration">Illustration</a></li>
                             <li><a data-categories="web">Web</a></li>
                         </ul>
                     </div> <!-- END #portfolio-filter -->
 
                     <div id="portfolio-items" class="four-columns">
 
+                        <div class="item" data-categories="animation design">
+                            <div class="thumb-image">
+                                <a class="video iframe" href="http://player.vimeo.com/video/62882346?byline=0&portrait=0"><img src="img/portfolio/thumb13.jpg" alt="Sample Image"/></a>
+                            </div>                
+                            <div class="thumb-tag">
+                                <h3>Item Title <span>animation/design</span></h3>
+                            </div>
+                        </div> <!-- END .item -->                        
+
                         <div class="item" data-categories="illustration design">
                             <div class="thumb-image">
                                 <a class="single-image" href="img/portfolio/image1.jpg"><img src="img/portfolio/thumb1.jpg" alt="Sample Image"/></a>
                             </div>                
                             <div class="thumb-tag">
-                                <h3>Item Title <span>design/animation</span></h3>
+                                <h3>Item Title <span>illustration/design</span></h3>
                             </div>
                         </div> <!-- END .item -->
 
-                        <div class="item" data-categories="illustration photography">
+                        <div class="item" data-categories="photography web">
                             <div class="thumb-image">
-                                <a class="single-image" href="img/portfolio/image1.jpg"><img src="img/portfolio/thumb1.jpg" alt="Sample Image"/></a>
+                                <a class="single-image" href="img/portfolio/image9.jpg"><img src="img/portfolio/thumb9.jpg" alt="Sample Image"/></a>
                             </div>                
                             <div class="thumb-tag">
-                                <h3>Item Title <span>design/animation</span></h3>
+                                <h3>Item Title <span>photography/web</span></h3>
+                            </div>
+                        </div> <!-- END .item -->                        
+
+                        <div class="item" data-categories="animation design">
+                            <div class="thumb-image">
+                                <a class="video iframe" href="http://player.vimeo.com/video/29943426?byline=0&portrait=0"><img src="img/portfolio/thumb14.jpg" alt="Sample Image"/></a>
+                            </div>                
+                            <div class="thumb-tag">
+                                <h3>Item Title <span>animation/design</span></h3>
+                            </div>
+                        </div> <!-- END .item --> 
+
+                        <div class="item" data-categories="animation design">
+                            <div class="thumb-image">
+                                <a class="single-image" href="img/portfolio/image3.jpg"><img src="img/portfolio/thumb3.jpg" alt="Sample Image"/></a>
+                            </div>                
+                            <div class="thumb-tag">
+                                <h3>Item Title <span>illustration/design</span></h3>
                             </div>
                         </div> <!-- END .item -->
-                        
+
+                        <div class="item" data-categories="photography web">
+                            <div class="thumb-image">
+                                <a class="single-image" href="img/portfolio/image10.jpg"><img src="img/portfolio/thumb10.jpg" alt="Sample Image"/></a>
+                            </div>                
+                            <div class="thumb-tag">
+                                <h3>Item Title <span>photography/web</span></h3>
+                            </div>
+                        </div> <!-- END .item -->                            
+
+                        <div class="item" data-categories="animation design">
+                            <div class="thumb-image">
+                                <a class="single-image" href="img/portfolio/image4.jpg"><img src="img/portfolio/thumb4.jpg" alt="Sample Image"/></a>
+                            </div>                
+                            <div class="thumb-tag">
+                                <h3>Item Title <span>illustration/design</span></h3>
+                            </div>
+                        </div> <!-- END .item -->
+
+                        <div class="item" data-categories="photography web">
+                            <div class="thumb-image">
+                                <a class="single-image" href="img/portfolio/image11.jpg"><img src="img/portfolio/thumb11.jpg" alt="Sample Image"/></a>
+                            </div>                
+                            <div class="thumb-tag">
+                                <h3>Item Title <span>photography/web</span></h3>
+                            </div>
+                        </div> <!-- END .item -->                         
+
                         <div class="item" data-categories="illustration design">
                             <div class="thumb-image">
-                                <a class="single-image" href="img/portfolio/image1.jpg"><img src="img/portfolio/thumb1.jpg" alt="Sample Image"/></a>
+                                <a class="single-image" href="img/portfolio/image5.jpg"><img src="img/portfolio/thumb5.jpg" alt="Sample Image"/></a>
                             </div>                
                             <div class="thumb-tag">
-                                <h3>Item Title <span>design/animation</span></h3>
+                                <h3>Item Title <span>illustration/design</span></h3>
                             </div>
-                        </div> <!-- END .item -->
-                        
-                        <div class="item" data-categories="illustration photography">
-                            <div class="thumb-image">
-                                <a class="single-image" href="img/portfolio/image1.jpg"><img src="img/portfolio/thumb1.jpg" alt="Sample Image"/></a>
-                            </div>                
-                            <div class="thumb-tag">
-                                <h3>Item Title <span>design/animation</span></h3>
-                            </div>
-                        </div> <!-- END .item -->
-                        
-                        <div class="item" data-categories="web photography">
-                            <div class="thumb-image">
-                                <a class="single-image" href="img/portfolio/image1.jpg"><img src="img/portfolio/thumb1.jpg" alt="Sample Image"/></a>
-                            </div>                
-                            <div class="thumb-tag">
-                                <h3>Item Title <span>design/animation</span></h3>
-                            </div>
-                        </div> <!-- END .item -->
-                        
-                        <div class="item" data-categories="web animation">
-                            <div class="thumb-image">
-                                <a class="single-image" href="img/portfolio/image1.jpg"><img src="img/portfolio/thumb1.jpg" alt="Sample Image"/></a>
-                            </div>                
-                            <div class="thumb-tag">
-                                <h3>Item Title <span>design/animation</span></h3>
-                            </div>
-                        </div> <!-- END .item -->
-                        
+                        </div> <!-- END .item -->    
+
                         <div class="item" data-categories="illustration design">
                             <div class="thumb-image">
-                                <a class="single-image" href="img/portfolio/image1.jpg"><img src="img/portfolio/thumb1.jpg" alt="Sample Image"/></a>
+                                <a class="single-image" href="img/portfolio/image6.jpg"><img src="img/portfolio/thumb6.jpg" alt="Sample Image"/></a>
                             </div>                
                             <div class="thumb-tag">
-                                <h3>Item Title <span>design/animation</span></h3>
+                                <h3>Item Title <span>illustration/design</span></h3>
                             </div>
-                        </div> <!-- END .item -->
-                        
-                        <div class="item" data-categories="illustration photography">
+                        </div> <!-- END .item -->    
+
+                        <div class="item" data-categories="photography web">
                             <div class="thumb-image">
-                                <a class="single-image" href="img/portfolio/image1.jpg"><img src="img/portfolio/thumb1.jpg" alt="Sample Image"/></a>
+                                <a class="single-image" href="img/portfolio/image12.jpg"><img src="img/portfolio/thumb12.jpg" alt="Sample Image"/></a>
                             </div>                
                             <div class="thumb-tag">
-                                <h3>Item Title <span>design/animation</span></h3>
+                                <h3>Item Title <span>photography/web</span></h3>
                             </div>
-                        </div> <!-- END .item -->
-                        
-                        <div class="item" data-categories="illustration animation">
-                            <div class="thumb-image">
-                                <a class="iframe video" href="http://player.vimeo.com/video/29943426?byline=0&amp;portrait=0"><img src="img/portfolio/thumb1.jpg" alt="Sample Image"/></a>
-                            </div>                
-                            <div class="thumb-tag">
-                                <h3>Item Title <span>design/animation</span></h3>
-                            </div>
-                        </div> <!-- END .item -->
-                        
-                        <div class="item" data-categories="web animation">
-                            <div class="thumb-image">
-                                <a class="single-image" href="img/portfolio/image1.jpg"><img src="img/portfolio/thumb1.jpg" alt="Sample Image"/></a>
-                            </div>                
-                            <div class="thumb-tag">
-                                <h3>Item Title <span>design/animation</span></h3>
-                            </div>
-                        </div> <!-- END .item -->
-                        
+                        </div> <!-- END .item -->                               
+
                         <div class="item" data-categories="illustration design">
                             <div class="thumb-image">
-                                <a class="single-image" href="img/portfolio/image1.jpg"><img src="img/portfolio/thumb1.jpg" alt="Sample Image"/></a>
+                                <a class="single-image" href="img/portfolio/image8.jpg"><img src="img/portfolio/thumb8.jpg" alt="Sample Image"/></a>
                             </div>                
                             <div class="thumb-tag">
-                                <h3>Item Title <span>design/animation</span></h3>
+                                <h3>Item Title <span>illustration/design</span></h3>
                             </div>
-                        </div> <!-- END .item -->
-                        
-                        <div class="item" data-categories="web animation">
-                            <div class="thumb-image">
-                                <a class="single-image" href="img/portfolio/image1.jpg"><img src="img/portfolio/thumb1.jpg" alt="Sample Image"/></a>
-                            </div>                
-                            <div class="thumb-tag">
-                                <h3>Item Title <span>design/animation</span></h3>
-                            </div>
-                        </div> <!-- END .item -->
+                        </div> <!-- END .item -->                                                                                                                                                                            
                          
                     </div> <!-- END #portfolio-filters -->
 
@@ -327,70 +397,6 @@
             </div> <!-- END .row -->
         </article> <!-- END #portfolio -->
 
-        
-        <article id="our-team" class="odd content">
-            <div class="row">
-                <div class="large-12 columns">
-
-
-                    <h2 class="header-title">Our Team <span class="tagline">We are a group of awesome individuals!</span></h2>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ab, cumque at nesciunt aliquid fugit quo eveniet nulla assumenda sed dolorum iusto sequi consequuntur! Repudiandae, quos, nisi, error vitae pariatur quo assumenda ipsa tempore dolore temas sed.</p>              
-
-                    <div class="row">
-                        <div class="team-member large-4 columns center">
-                            <div class="portrait">
-                                <a href="#">
-                                    <em class="p-overlay"></em>
-                                    <img src="img/john-doe.jpg" alt="John Doe" />
-                                </a>
-                                <ul id="team-social">
-                                    <li><a class="team-s fb" href="#"><img src="img/empty.gif" alt="Facebook" /></a></li>   
-                                    <li><a class="team-s tt" href="#"><img src="img/empty.gif" alt="Twitter" /></a></li>    
-                                    <li><a class="team-s gp" href="#"><img src="img/empty.gif" alt="Google Plus" /></a></li>    
-                                </ul>
-                            </div>
-                                <h4 class="name">John Doe <span class="position">Designer</span></h4>
-                                
-                        </div> <!--END of Team Member Box--> 
-
-                        <div class="team-member large-4 columns center">
-                            <div class="portrait">
-                                <a href="#">
-                                    <em class="p-overlay"></em>
-                                    <img src="img/jane-doe.jpg" alt="Jane Doe" />
-                                </a>
-                                <ul id="team-social">
-                                    <li><a class="team-s fb" href="#"><img src="img/empty.gif" alt="Facebook" /></a></li>   
-                                    <li><a class="team-s tt" href="#"><img src="img/empty.gif" alt="Twitter" /></a></li>    
-                                    <li><a class="team-s gp" href="#"><img src="img/empty.gif" alt="Google Plus" /></a></li>    
-                                </ul>                               
-                            </div>
-                                <h4 class="name">Jane Doe <span class="position">Founder</span></h4>
-                                    
-                        </div> <!--END of Team Member Box--> 
-
-                        <div class="team-member large-4 columns center">
-                            <div class="portrait">
-                                <a href="#">    
-                                    <em class="p-overlay"></em>
-                                    <img src="img/jason-doe.jpg" alt="Jason Doe" />
-                                </a>
-                                <ul id="team-social">
-                                    <li><a class="team-s fb" href="#"><img src="img/empty.gif" alt="Facebook" /></a></li>   
-                                    <li><a class="team-s tt" href="#"><img src="img/empty.gif" alt="Twitter" /></a></li>    
-                                    <li><a class="team-s gp" href="#"><img src="img/empty.gif" alt="Google Plus" /></a></li>    
-                                </ul>                               
-                            </div>
-
-                                <h4 class="name">Jason Doe <span class="position">Designer</span></h4>
-                                    
-                        </div> <!--END of Team Member Box--> 
-                    </div><!-- END .row -->
-
-                </div> <!-- END .large-12 .columns -->
-            </div> <!-- END .row -->
-        </article> <!-- END #our-team -->
 
         <article id="features" class="even content">
             <div class="row">
@@ -717,9 +723,9 @@
                     <ul>                         
                       <li><a href="#home">Home</a></li>
                       <li><a href="#about">About</a></li>
+                      <li><a href="#our-team">Our Team</a></li>
                       <li><a href="#services">Services</a></li>                           
                       <li><a href="#portfolio">Portfolio</a></li>
-                      <li><a href="#our-team">Our Team</a></li>
                       <li><a href="#features">Features</a></li>
                       <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -737,6 +743,8 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
         <script src="//maps.google.com/maps/api/js?sensor=false"></script>
         <script src="js/plugins.js"></script>
+        <script src="js/foundation.js"></script>
+        <script src="js/foundation.topbar.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
