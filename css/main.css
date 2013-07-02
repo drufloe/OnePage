@@ -191,19 +191,19 @@ header {
             -o-transition: all 0.8s;
             transition: all 0.8s;
         }
-        .nav-container a.selected,.nav-container a:focus,.nav-container a:hover {
+        .nav-container a.selected{
             border-bottom-color: #00aeef;
             color: #00aeef;
             outline: none;
         }
-       /* .nav-container a:focus {
+        .nav-container a:focus {
             border-bottom-color: #4a4a4a;
             color: #00aeef;
-        }*/
-       /* .nav-container a:hover {
+        }
+       .nav-container a:hover {
             border-bottom-color: #c1c1c1;
             color: #00aeef;
-        }*/
+        }
 
 
 /* ==========================================================================
@@ -1760,6 +1760,10 @@ html[xmlns] .slides {display: block;}
             width: 100%;
             z-index: 1000;
             margin: 0;
+            margin-left: -9px; 
+            -webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.5);;
+            -moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.5);;
+            box-shadow: 0px 1px 1px rgba(0,0,0,0.5);;
         }
         .nav-container li {
             float: none;
@@ -1767,6 +1771,7 @@ html[xmlns] .slides {display: block;}
         .nav-container li a {
             border-top: 1px solid #ededed;
             padding: 0 15px;
+            border-bottom:none;
         }
 
         .icon-features i {
