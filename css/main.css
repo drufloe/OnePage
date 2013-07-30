@@ -2074,7 +2074,7 @@ html[xmlns] .slides {display: block;}
 
 .predefined { margin: 5px 0 5px 10px; }
 .predefined p { font-size: 11px; margin: 5px 0; }
-.predefined a { display: inline-block; margin-right: 3px; padding: 2px; border: 1px solid #ccc; }
+.predefined a { display: inline-block; margin-right: 3px; padding: 2px; border: 1px solid #ccc; border-radius:10px;}
 .predefined a span { display: block; width: 15px; height: 15px; }
 .predefined a.default { border-color: #00aeef; }
 .predefined a.default span { background-color: #0072bb; }
