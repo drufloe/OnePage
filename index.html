@@ -27,17 +27,22 @@
         ================================================================== -->
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/foundation.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/main.css">        
         <link href="css/social_foundicons.css" rel="stylesheet">
         <link href="css/general_foundicons.css" rel="stylesheet">
-        
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
-
-        <!-- HTML5Shim
-        ================================================================== -->
-        <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <!--[if lt IE 8]>
+            <link rel="stylesheet" href="css/social_foundicons_ie7.css">
+            <link rel="stylesheet" href="css/general_foundicons_ie7.css">
         <![endif]-->
+
+        <!-- Color theme style (change css name to either default, green, light-green, purple, dark-blue)
+        ================================================================== -->
+        <link id="customstyle" rel="stylesheet" href="css/theme/default.css">
+
+        <!-- Modernizr
+        ================================================================== -->
+        <script src="js/customized.modernizr.js"></script>
 
     </head>
     <body>
@@ -52,7 +57,7 @@
                 <div class="large-12 columns">
 
                     <h1 id="logo">
-                        <a href="/#home" title="Home">
+                        <a href="#home" title="Home">
                             <img class="hide-for-small" src="img/logo.png" alt="OnePage" />
                             <img class="show-for-small" src="img/logo-mobile.png" alt="OnePage Mobile" /> 
                         </a>
@@ -91,21 +96,24 @@
 
                 <div id="featured" class="flexslider">
                   <ul class="slides">
-                    <li id="intro-slide1">               
+                    <li class="slide">
+                        <img class="slide-background" src="img/slider/slide1.jpg" alt="Slide 1">            
                         <div class="slide-content">
                             <img class="scale-with-grid" src="img/slider/screens.png" alt="Responsive Design" /> 
                             <h2>Fully Responsive Design</h2>
                             <p>This Template is fully Responsive, clean and <br/>simple using smooth and elegant lines.</p>
                         </div>
                     </li>
-                   <li id="intro-slide2">               
+                   <li class="slide">
+                        <img class="slide-background" src="img/slider/slide2.jpg" alt="Slide 2">             
                         <div class="slide-content">
                             <img src="img/slider/infinite.png" alt="Powerful Slider" />  
                             <h2>Powerful Jquery Slider</h2>
                             <p>Modern Design & Multi-purpose Theme <br/>New edge of the template experience</p>
                         </div>
                     </li>
-                    <li id="intro-slide3">                    
+                    <li class="slide">
+                        <img class="slide-background" src="img/slider/slide3.jpg" alt="Slide 3">                
                         <div class="slide-content">    
                             <img src="img/slider/cup.png" alt="Premium Template" />                      
                             <h2>Premium Template</h2>
@@ -113,13 +121,13 @@
                         </div>
                     </li>
                   </ul>
-                </div> <!-- END .flexslider --> 
+                </div> <!-- END #featured --> 
             
         </article> <!-- END #intro -->
 
         
-        <article id="about" class="even content">
-            <div class="row">
+        <article id="about" class="odd content">
+            <div class="row animated">
 
                 <div class="large12 columns">
                     <h2 class="header-title">About Us <span class="tagline">We don't solve problems, we prevent them.</span></h2>
@@ -147,8 +155,8 @@
         </article> <!-- END #about -->
 
 
-        <article id="our-team" class="odd content">
-            <div class="row">
+        <article id="our-team" class="even content">
+            <div class="row animated">
                 <div class="large-12 columns">
 
 
@@ -156,60 +164,64 @@
 
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ab, cumque at nesciunt aliquid fugit quo eveniet nulla assumenda sed dolorum iusto sequi consequuntur! Repudiandae, quos, nisi, error vitae pariatur quo assumenda ipsa tempore dolore temas sed.</p>              
 
-                    <div class="row">
+                    <div  id="team-list" class="row">
                         <div class="team-member large-4 columns center">
                             <div class="portrait">
                                 <a class="ajax" href="team/john.html">
-                                    <em class="p-overlay"></em>
-                                    <img src="img/john-doe.jpg" alt="John Doe" />
+                                    <div class="photo">                                                                              
+                                        <em class="p-overlay"></em>                                          
+                                        <img src="img/john-doe.jpg" alt="John Doe" />
+                                    </div>    
+                                    <h4 class="name">John Doe <span class="position">Developer</span></h4>
                                 </a>
+
                                 <ul id="team-social">
-                                    <li><a class="team-s fb" href="#"><img src="img/empty.gif" alt="Facebook" /></a></li>   
-                                    <li><a class="team-s tt" href="#"><img src="img/empty.gif" alt="Twitter" /></a></li>    
-                                    <li><a class="team-s gp" href="#"><img src="img/empty.gif" alt="Google Plus" /></a></li>    
+                                    <li><a class="targetblank team-s" href="#"><i class="social foundicon-facebook"></i></a></li>   
+                                    <li><a class="targetblank team-s" href="#"><i class="social foundicon-twitter"></i></a></li>    
+                                    <li><a class="targetblank team-s" href="#"><i class="social foundicon-linkedin"></i></a></li>    
                                 </ul>
+
                             </div>
-                                <a class="ajax" href="team/john.html">
-                                    <h4 class="name">John Doe <span class="position">Designer</span></h4>
-                                </a>    
-                                
-                        </div> <!--END of Team Member Box--> 
+                        </div> <!--END of Team Member Box-->
 
                         <div class="team-member large-4 columns center">
                             <div class="portrait">
                                 <a class="ajax" href="team/jane.html">
-                                    <em class="p-overlay"></em>
-                                    <img src="img/jane-doe.jpg" alt="Jane Doe" />
+                                    <div class="photo">
+                                        <em class="p-overlay"></em>                                          
+                                        <img src="img/jane-doe.jpg" alt="Jane Doe" />
+                                    </div>    
+                                    <h4 class="name">Jane Doe <span class="position">Designer</span></h4>
                                 </a>
+
                                 <ul id="team-social">
-                                    <li><a class="team-s fb" href="#"><img src="img/empty.gif" alt="Facebook" /></a></li>   
-                                    <li><a class="team-s tt" href="#"><img src="img/empty.gif" alt="Twitter" /></a></li>    
-                                    <li><a class="team-s gp" href="#"><img src="img/empty.gif" alt="Google Plus" /></a></li>    
-                                </ul>                               
+                                    <li><a class="targetblank team-s" href="#"><i class="social foundicon-facebook"></i></a></li>   
+                                    <li><a class="targetblank team-s" href="#"><i class="social foundicon-twitter"></i></a></li>    
+                                    <li><a class="targetblank team-s" href="#"><i class="social foundicon-linkedin"></i></a></li>    
+                                </ul>
+
                             </div>
-                                <a class="ajax" href="team/jane.html">
-                                    <h4 class="name">Jane Doe <span class="position">Founder</span></h4>
-                                </a>    
-                                    
                         </div> <!--END of Team Member Box--> 
 
                         <div class="team-member large-4 columns center">
                             <div class="portrait">
-                                <a class="ajax" href="team/jason.html">   
-                                    <em class="p-overlay"></em>
-                                    <img src="img/jason-doe.jpg" alt="Jason Doe" />
-                                </a>
-                                <ul id="team-social">
-                                    <li><a class="team-s fb" href="#"><img src="img/empty.gif" alt="Facebook" /></a></li>   
-                                    <li><a class="team-s tt" href="#"><img src="img/empty.gif" alt="Twitter" /></a></li>    
-                                    <li><a class="team-s gp" href="#"><img src="img/empty.gif" alt="Google Plus" /></a></li>    
-                                </ul>                               
-                            </div>
                                 <a class="ajax" href="team/jason.html">
-                                    <h4 class="name">Jason Doe <span class="position">Designer</span></h4>
+                                    <div class="photo">
+                                        <em class="p-overlay"></em>                                          
+                                        <img src="img/jason-doe.jpg" alt="Jason Doe" />
+                                    </div>    
+                                    <h4 class="name">Jason Doe <span class="position">SEO</span></h4>
                                 </a>
-                                    
-                        </div> <!--END of Team Member Box--> 
+
+                                <ul id="team-social">
+                                    <li><a class="targetblank team-s" href="#"><i class="social foundicon-facebook"></i></a></li>   
+                                    <li><a class="targetblank team-s" href="#"><i class="social foundicon-twitter"></i></a></li>    
+                                    <li><a class="targetblank team-s" href="#"><i class="social foundicon-linkedin"></i></a></li>    
+                                </ul>
+
+                            </div>
+                        </div> <!--END of Team Member Box-->                                                  
+
                     </div><!-- END .row -->
 
                 </div> <!-- END .large-12 .columns -->
@@ -219,7 +231,7 @@
 
 
         <article id="services" class="odd content services">
-            <div class="row">
+            <div class="row animated">
                 <div class="large-12 columns">
 
                     
@@ -268,7 +280,7 @@
 
         
         <article id="portfolio" class="even content">
-            <div class="row">
+            <div class="row animated">
                 <div class="large-12 columns">
 
                 
@@ -403,8 +415,8 @@
         </article> <!-- END #portfolio -->
 
 
-        <article id="features" class="even content">
-            <div class="row">
+        <article id="features" class="odd content">
+            <div class="row animated">
                 <div class="large-12 columns">
 
 
@@ -574,7 +586,7 @@
                             <div class="large-6 columns">
                                 <h3>Notification</h3>
                                 <div class="notice warning">Best check yo self, something could be wrong, buddy.</div>
-                                <div class="notice error">Oh snap! Now we've really done it. Better to fix this quick.</div>
+                                <div class="notice error">Oh snap! Now we've really done it. Better fix this quick.</div>
                                 <div class="notice success">Awesome! Let's Go!</div>
                                 <div class="notice info">Heads Up! This needs your attention.</div>                              
                             </div> <!-- NOTIFICATION feature end -->
@@ -609,10 +621,10 @@
                                 <div class="pricing-table">
                                     <div class="price">$150</div>
                                     <h4 class="level">Basic</h4>
-                                    <p>Perfect for thise getting started with our app.</p>
+                                    <p>Perfect for getting started with our app.</p>
                                     <ul class="t-features">
                                         <li>15 Projects</li>
-                                        <li>5 GB Storage</li>
+                                        <li>15 GB Storage</li>
                                         <li>Unlimited Users</li>
                                         <li>No Time Tracking</li>
                                         <li>Enhanced Security</li>
@@ -622,12 +634,12 @@
                             </div>
                             <div class="large-4 columns">
                                 <div class="pricing-table highlight">
-                                    <div class="price">$150</div>
-                                    <h4 class="level">Basic</h4>
-                                    <p>Perfect for thise getting started with our app.</p>
+                                    <div class="price">$250</div>
+                                    <h4 class="level">Standard</h4>
+                                    <p>Perfect for getting started with our app.</p>
                                     <ul class="t-features">
-                                        <li>15 Projects</li>
-                                        <li>5 GB Storage</li>
+                                        <li>25 Projects</li>
+                                        <li>30 GB Storage</li>
                                         <li>Unlimited Users</li>
                                         <li>No Time Tracking</li>
                                         <li>Enhanced Security</li>
@@ -637,12 +649,12 @@
                             </div>
                             <div class="large-4 columns">
                                 <div class="pricing-table">
-                                    <div class="price">$150</div>
-                                    <h4 class="level">Basic</h4>
-                                    <p>Perfect for thise getting started with our app.</p>
+                                    <div class="price">$350</div>
+                                    <h4 class="level">Ultimate</h4>
+                                    <p>Perfect for getting started with our app.</p>
                                     <ul class="t-features">
-                                        <li>15 Projects</li>
-                                        <li>5 GB Storage</li>
+                                        <li>Unlimited Projects</li>
+                                        <li>Unlimited Storage</li>
                                         <li>Unlimited Users</li>
                                         <li>No Time Tracking</li>
                                         <li>Enhanced Security</li>
@@ -658,8 +670,8 @@
             </div> <!-- END .row -->
         </article> <!-- END #features -->
 
-        <article id="contact" class="odd content">
-            <div class="row">
+        <article id="contact" class="even content">
+            <div class="row animated">
                 <div class="large-12 columns">
                     
 
@@ -690,7 +702,7 @@
 
                                 <div class="ajax-response"></div>
 
-                                <button type="submit" value="Send" class="btn blue">Submit</button> 
+                                <button type="submit" value="Send" class="btn">Submit</button> 
 
                             </form>    
                         </div>
@@ -699,11 +711,11 @@
                             <p>Phone: (123) 456-7890 <br/>Fax: (123) 456-7890 <br/>Mobile: (123) 456-7890</p>
                             <h4>Follow Us</h4>
                             <ul class="social-media clearfix">
-                                <li><a href="#"><i class="social foundicon-facebook"><img src="img/empty.gif" alt="Facebook" /></i></a></li>
-                                <li><a href="#"><i class="social foundicon-twitter"><img src="img/empty.gif" alt="Twitter" /></i></a></li>
-                                <li><a href="#"><i class="social foundicon-linkedin"><img src="img/empty.gif" alt="LinkedIn" /></i></a></li>
-                                <li><a href="#"><i class="social foundicon-pinterest"><img src="img/empty.gif" alt="Pinterest" /></i></a></li>
-                                <li><a href="#"><i class="social foundicon-google-plus"><img src="img/empty.gif" alt="Google Plus" /></i></a></li>
+                                <li><a class="targetblank" href="#"><i class="social foundicon-facebook"><img src="img/empty.gif" alt="Facebook" /></i></a></li>
+                                <li><a class="targetblank" href="#"><i class="social foundicon-twitter"><img src="img/empty.gif" alt="Twitter" /></i></a></li>
+                                <li><a class="targetblank" href="#"><i class="social foundicon-linkedin"><img src="img/empty.gif" alt="LinkedIn" /></i></a></li>
+                                <li><a class="targetblank" href="#"><i class="social foundicon-pinterest"><img src="img/empty.gif" alt="Pinterest" /></i></a></li>
+                                <li><a class="targetblank" href="#"><i class="social foundicon-google-plus"><img src="img/empty.gif" alt="Google Plus" /></i></a></li>
                             </ul>   
                         </div>
                     </div>
@@ -722,18 +734,20 @@
         <!-- Footer
         ================================================================== -->  
         <footer>
-            <div class="row">
-                <small>Copyright © 2013 <span class="sblue">Synerge</span>design.</small>
-                <div class="nav-container hide-for-small">
-                    <ul>                         
-                      <li><a href="#home">Home</a></li>
-                      <li><a href="#about">About</a></li>
-                      <li><a href="#our-team">Our Team</a></li>
-                      <li><a href="#services">Services</a></li>                           
-                      <li><a href="#portfolio">Portfolio</a></li>
-                      <li><a href="#features">Features</a></li>
-                      <li><a href="#contact">Contact</a></li>
-                    </ul>
+            <div class="footer">
+                <div class="row">
+                    <small>Copyright © 2013 <span class="sblue">Synerge</span>design.</small>
+                    <div class="nav-container hide-for-small">
+                        <ul>                         
+                          <li><a href="#home">Home</a></li>
+                          <li><a href="#about">About</a></li>
+                          <li><a href="#our-team">Our Team</a></li>
+                          <li><a href="#services">Services</a></li>                           
+                          <li><a href="#portfolio">Portfolio</a></li>
+                          <li><a href="#features">Features</a></li>
+                          <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </footer>   
@@ -741,6 +755,21 @@
             
         </div> <!-- END #main-content -->
 
+        <!-- COLOR SWITCHER FOR DEMO PURPOSE ONLY. REMOVE ON PRODUCTION. -->
+        <div class="settings">
+            <a class="show"></a>
+            <div class="settingsinner">
+                <h4>Style Switcher</h4>
+                <div class="predefined">
+                    <p>Predefined style:</p>
+                    <a href="" class="default"><span></span></a>
+                    <a href="green" class="green"><span></span></a>
+                    <a href="light-green" class="light-green"><span></span></a>
+                    <a href="purple" class="purple"><span></span></a>
+                    <a href="dark-blue" class="dark-blue"><span></span></a>
+                </div>
+            </div><!--settingsinner-->
+        </div><!--settings-->
 
         <!-- jQuery
         ================================================================== -->

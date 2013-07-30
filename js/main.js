@@ -7,10 +7,15 @@
 		var $container = $('#main-container'),
 			$navLinks = $('nav li a[href^="#"]');
 
-
+		// Change all articles ID to avoid interference with browser's own scrollTo#hash
 		$navLinks.each(function(){
 			var target = $(this).attr('href').replace(/#/, '');
 				$('#'+target).attr('id', target+'_modified'); // Change ID
+		});
+
+		// Top navigation links
+		$navLinks.mousedown(function () {
+			hash_handler();
 		});
 
 
@@ -53,7 +58,7 @@
 			$navLinks.each(function(){
 				var target = $(this).attr('href'),
 					targetPosition = $container.scrollTop() + $(target+'_modified').offset().top,
-					targetLimit = 320;
+					targetLimit = 320;					
 				
 				if ($container.scrollTop() > (targetPosition - targetLimit)) {
 					$('nav a.selected').removeClass('selected');
@@ -103,7 +108,7 @@
 			hash = window.location.hash;
 
 			if(hash) {
-			 	$container.mCustomScrollbar("scrollTo",hash+'_modified');
+			 	$container.mCustomScrollbar("scrollTo",hash+'_modified');			 	
 			 	removeAddSelected(hash);
 			} else {
 			 	removeAddSelected();
@@ -124,7 +129,7 @@
 
 
 
-	})(jQuery);
+	})($);
 
 
 /* ---------------------------------------------------------------------- */
@@ -314,7 +319,7 @@ $(function(){
 				closeClick  : false
 			});	
 
-})(jQuery);
+})($);
 /* end Fancy Box */
 
 /* ---------------------------------------------------------------------- */
@@ -344,7 +349,7 @@ $(function(){
 		});
 	});
 
-})(jQuery);
+})($);
 
 /* ---------------------------------------------------------------------- */
 /*	Google Maps
@@ -366,7 +371,7 @@ $(function(){
 		});
 
 	}
-})(jQuery);
+})($);
 
 
 /* ---------------------------------------------------------------------- */
@@ -427,7 +432,7 @@ $(function(){
 		    return pattern.test(email);
 		};
 
-})(jQuery);
+})($);
 
 /* ---------------------------------------------------------------------- */
 /*	MOBILE SLIDE DOWN & WINDOW Resize detection
@@ -494,7 +499,25 @@ $(function(){
 		}
 	}
 
-})(jQuery);
+})($);
+
+(function(){
+	/* External links (just add the "targetblank" class to any link you want) */
+	$('a.targetblank').click(function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		window.open(this.href, '_blank');
+	});
+})();
+
+(function(){
+	if(Modernizr.svg) {
+		$('#team-list').find('.p-overlay').after('<svg class="onhover-border" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="259.285px" height="284.431px" viewBox="0 0 259.285 284.431" enable-background="new 0 0 259.285 284.431" xml:space="preserve"><path d="M234.895 53.861L153.533 6.9 c-7.236-4.178-15.498-6.387-23.89-6.387s-16.653 2.209-23.891 6.387l-81.36 46.974C9.655 62.4 0.5 78.2 0.5 95.242v93.947 c0 17 9.2 32.9 23.9 41.381l81.36 46.974c7.238 4.2 15.5 6.4 23.9 6.388s16.654-2.209 23.89-6.388l81.361-46.974 c14.736-8.508 23.891-24.363 23.891-41.381V95.242C258.785 78.2 249.6 62.4 234.9 53.861z M255.785 189.2 c0 15.948-8.578 30.81-22.391 38.783l-81.361 46.974c-6.781 3.916-14.523 5.985-22.39 5.985c-7.865 0-15.608-2.07-22.391-5.985 l-81.36-46.974C12.08 220 3.5 205.1 3.5 189.188V95.242c0-15.948 8.58-30.808 22.392-38.782l81.36-46.974 C114.035 5.6 121.8 3.5 129.6 3.5c7.867 0 15.6 2.1 22.4 5.985l81.361 46.974c13.813 8 22.4 22.8 22.4 38.8 V189.188z" class="style0"></path></svg>');
+	}	
+})();
+
+
+
 
 //Execute when DOM is Ready and Images has loaded
  $(window).load(function() {
@@ -507,3 +530,26 @@ $(function(){
    });
 
  });
+
+ (function () {
+ 	// COLOR SWITCHER: DEMO PURPOSES ONLY DO NOT INCLUDE IN PRODUCTION //
+	$('.settings .show').click(function(){
+		if($(this).hasClass('hide')) {
+			$(this).parent().stop().animate({marginLeft: 0},'fast');
+			$(this).removeClass('hide');
+		} else {
+			$(this).parent().stop().animate({marginLeft: -158},'fast');	
+			$(this).addClass('hide');
+		}
+	});
+	
+	$('.predefined a').click(function(){
+		var style = $(this).attr('href');
+		if($('#customstyle').length == 0)
+			$('head').append('<link id="customstyle" rel="stylesheet" href="css/theme/'+style+'.css" type="text/css" />');
+		else
+			$('#customstyle').attr('href','css/theme/'+style+'.css');
+
+		return false;
+	});
+ })(); 

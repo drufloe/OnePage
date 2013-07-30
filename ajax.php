@@ -1,12 +1,8 @@
 <?php
-/* 
-	Spark – Simple and Effective 
-	Rev. 6
-*/
 
 
 // Replace the email address with the one that should receive the contact form inquiries.
-define('TO_EMAIL', 'darwin.rufloe@gmail.com');
+define('TO_EMAIL', 'test@gmail.com');
 
 // === You don't need to change anything else. ===
 

@@ -1,0 +1,65 @@
+a,
+.services i,
+.nav-container a:hover,
+.nav-container a.selected,
+.thumb-tag h2, 
+.thumb-tag h3,
+.team-member .name,
+.icon-features i:hover,
+.pricing-table .price,
+.pricing-table .sign-up,
+#team-social li a:hover {
+	color: #1abc9c;
+}
+
+a:hover, 
+a:selected, 
+a.visited,
+.icon-features i:hover {
+	color: #16a085;
+}
+
+.pricing-table.highlight,
+.pricing-table.highlight .sign-up:hover,
+button:hover, .btn:hover,
+.settingsinner h4 {
+	background-color:  #16a085;
+}
+
+.nav-container a:hover,
+.nav-container a.selected {
+	border-bottom-color: #1abc9c;
+}
+
+
+.pricing-table,
+.menu-select,
+#portfolio-filters a.active, 
+#portfolio-filters a:hover,
+.pricing-table .sign-up:hover,
+button, .btn {
+    background-color: #1abc9c;
+}
+
+.pricing-table.highlight .price,
+.pricing-table.highlight .sign-up,
+.social-media li i:hover {
+	color:#16a085;
+}
+
+.portrait .onhover-border {
+	stroke:	#1abc9c; 
+	stroke-miterlimit:	10;
+	fill:	#1abc9c;
+}
+
+.mCS-dark>.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    background:#1abc9c; /* rgba fallback */
+    background:rgba(26,188,156,1);
+
+}
+.mCS-dark>.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
+    background: #16a085; /* rgba fallback */
+    background: rgba(22,160,133,1);
+}
+
