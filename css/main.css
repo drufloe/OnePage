@@ -223,7 +223,7 @@ header {
 
 #main-container:before {
     position: absolute;
-    display: block;
+    display: none;
     width: 100%;
     height: 32px;
     top: -1px;
