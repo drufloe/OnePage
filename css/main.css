@@ -827,7 +827,6 @@ header {
 
     .portrait .photo > img {
         display:block;
-        height:98%;
         width:99%;
         margin: 1px auto;
     }
