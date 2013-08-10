@@ -819,6 +819,7 @@ header {
 
     .portrait .photo {
         max-width: 264px;
+        max-height: 289px;
         margin: 0 auto;
         position: relative;
         overflow: hidden;
