@@ -1907,7 +1907,7 @@ html[xmlns] .slides {display: block;}
 @media only screen and (min-width: 768px) and (max-width: 959px) {
     .nav-container li a {
     padding: 0 7px;
-    font-size: 0.9em;
+    font-size: 0.7em;
     }
 
 }
